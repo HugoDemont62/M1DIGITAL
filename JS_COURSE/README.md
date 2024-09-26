@@ -1,6 +1,7 @@
 # Cours de JavaScript
 
 Pour accéder à la page web de ce cours, [cliquez ici](index.html).
+Pour le JS : [cliquez ici](js/index.js).
 
 ## Les bases de JavaScript
 
