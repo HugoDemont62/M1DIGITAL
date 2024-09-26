@@ -2,7 +2,7 @@
 
 
 ## Cours de HTML
-liens vers le index de la page web : [HTML de la page internet](HTML_COURSE/index.html)
+liens vers le index de la page web : [HTML de la page internet](index.html)
 
 Rappelle rapide sur les balises HTML :
 
@@ -45,3 +45,11 @@ before after et les differentes façon de pointer la balise souhaitez :
 - `div:nth-child(odd)` : balise div d'index impair
 - `div:nth-child(even)` : balise div d'index pair
 - `div:nth-child(2n+1)` : balise div d'index impair
+
+
+Les différentes tailles de polices par exemple :
+
+- `font-size: 12px` : taille de police de 12 pixels
+- `font-size: 1.5em` : taille de police de 1.5 fois la taille de police par défaut
+- `font-size: 150%` : taille de police de 150% de la taille de police par défaut
+- `font-size: 150vw` : taille de police de 150% de la largeur de la fenêtre
