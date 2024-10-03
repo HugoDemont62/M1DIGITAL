@@ -2,7 +2,7 @@
 
 
 ## Cours de HTML
-liens vers le index de la page web : [HTML de la page internet](index.html)
+liens vers le index de la page web : [HTML de la page internet](HTML_26092024/index.html)
 
 Rappelle rapide sur les balises HTML :
 
