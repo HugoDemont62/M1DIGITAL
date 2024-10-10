@@ -1,27 +1,804 @@
 // Variable
 $primary-color: #3498db
 $secondary-color: #2ecc71
-$font-color: #333
+$font-color: #070414
 $background-color: #f5f5f5
 $base-font-size: 16px
 $base-line-height: 1.5
 $base-margin: 1rem
 $base-padding: 1rem
-// Rese
+$font-family: "Poppins", sans-serif
+
 *, *::before, *::after
   box-sizing: border-box
   margin: 0
   padding: 0
 
 html
+  font-family: $font-family
   font-size: $base-font-size
   line-height: $base-line-height
 
 body
-  font-family: Arial, sans-serif
   color: $font-color
-  background-color: red
   margin: 0
   padding: 0
 
+h1
+  display: block
+  font-size: 6em
+  margin-block-start: 0.67em
+  margin-block-end: 0.67em
+  font-weight: bold
+  width: 1rem
+  line-height: 1
 
+
+b
+  color: #393bb9
+  background-color: #ccc
+  border-radius: 100%
+  padding: 17px 10px
+  font-weight: 300
+
+.header-section
+  display: flex
+  flex-direction: column
+  top: 0
+  width: 100%
+  z-index: 1000
+  background-image: url("../images/banner-bg.png")
+  background-size: cover
+
+.container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 1110px
+  margin: 0 auto
+  padding: 0 $base-padding
+
+.container-banner
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 1110px
+  margin: 0 auto
+  padding: 0 $base-padding
+
+.navbar
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+
+.logo
+  display: flex
+  align-items: center
+
+.burger
+  display: flex
+  align-items: center
+  cursor: pointer
+
+header
+  width: 100%
+  padding: 30px 0 10px 0
+
+.banner
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: $base-padding * 2
+  padding-block: 5rem
+
+  .left-section
+    flex: 1
+    padding-right: $base-padding
+
+    p
+      color: #565656
+
+    .banner-cta
+      width: 35%
+      float: left
+      font-size: 20px
+      color: #ffffff
+      text-align: center
+      background-color: #070414
+      border-bottom: 7px solid #393bb9
+      border-radius: 30px
+      padding: 10px 0
+      margin-top: 1rem
+      text-decoration: none
+      transition: .5s
+
+      &:hover
+        background-color: #8480f9
+        border-bottom: 7px solid #393bb9
+
+  .right-section
+    flex: 1
+    text-align: right
+
+    img
+      max-width: 100%
+      height: auto
+
+.banner
+  position: relative
+
+  .right-section
+    position: relative
+
+  .left-section
+    position: relative
+
+.slider-btn
+  position: absolute
+  bottom: 10px
+  left: 50%
+  transform: translateX(-50%)
+  display: flex
+  justify-content: space-between
+
+  .slider-btn-left
+    position: absolute
+    left: -5rem
+    bottom: 10px
+
+  .slider-btn-right
+    position: absolute
+    right: -40rem
+    bottom: 10px
+
+  a
+    width: 65px
+    height: 65px
+    background: #000006
+    opacity: 1
+    font-size: 30px
+    color: #ffffff
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    transition: .5s
+
+    &:hover
+      background: #055eff
+
+@media (max-width: 768px)
+  .container-banner
+    display: flex
+    flex-direction: column
+  .banner-cta
+    width: 50%
+    font-size: 1em
+  .banner
+    flex-direction: column
+    align-items: center
+    text-align: center
+    padding-block: 2rem
+
+    .left-section
+      padding-right: 0
+      margin-bottom: 2rem
+
+      h1
+        font-size: 5em
+
+      p
+        font-size: 1em
+        text-align: left
+
+      .banner-cta
+        font-size: 1em
+
+    .right-section
+      text-align: center
+
+      img
+        max-width: 80%
+
+@media (max-width: 1250px)
+  .slider-btn
+    display: none
+
+@media (max-width: 1250px)
+  .banner
+    flex-direction: column
+
+    .left-section
+      order: 1
+
+    .right-section
+      order: 2
+      text-align: center
+      margin-top: 2rem
+
+
+// About us
+#aboutus
+  display: flex
+  justify-content: center
+  background-color: white
+  position: relative
+  padding-block: 10rem
+
+  .img-bg-aboutus
+    position: absolute
+    top: 50px
+    left: 0
+    width: 40%
+    height: auto
+    object-fit: cover
+    z-index: 0
+
+  .about-container
+    display: flex
+    max-width: 1000px
+    align-items: center
+    justify-content: space-between
+    position: relative
+    z-index: 1
+    padding: 2rem 0
+
+    .about-left
+      flex: 1
+      position: relative
+      z-index: 2
+
+      .img-aboutus
+        width: 80%
+        height: auto
+
+    .about-right
+      flex: 1
+      padding-left: 2rem
+      text-align: left
+
+      h2
+        font-size: 2.5rem
+        margin-bottom: 1rem
+        font-weight: 300
+
+        b
+          color: #393bb9
+          background-color: #ccc
+          border-radius: 50%
+          padding: 0.2rem 0.5rem
+          font-weight: 300
+
+      p
+        font-size: 1rem
+        margin-bottom: 1rem
+
+      .about-cta
+        display: inline-block
+        padding: 0.5rem 2rem
+        background-color: #393bb9
+        color: #fff
+        text-decoration: none
+        border-radius: 30px
+        transition: background-color 0.3s
+
+        &:hover
+          background-color: #8480f9
+
+  // Responsive adjustments
+@media (max-width: 768px)
+  #aboutus
+    padding-inline: 2rem
+    background-color: #dcdcdc
+    padding-block: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  .img-bg-aboutus
+    display: none
+  .about-container
+    flex-direction: column
+    text-align: left
+    padding: 1rem
+
+    .about-left
+      order: 2
+
+      img
+        width: 100%
+        height: auto
+
+    .about-right
+      order: 1
+      padding-left: 0
+      padding-top: 1rem
+      text-align: left
+
+      h2
+        font-size: 2rem
+
+      p
+        font-size: 0.9rem
+
+      .about-cta
+        font-size: 1rem
+
+// Services
+#services
+  display: flex
+  flex-direction: column
+  align-items: center
+  background-color: #393bb9
+  color: white
+  padding-block: 3rem
+  font-weight: 300
+
+  h2
+    font-size: 2.5rem
+    margin-bottom: 1rem
+    font-weight: 300
+
+    b
+      color: #393bb9
+      background-color: #ccc
+      border-radius: 50%
+      padding: 0.2rem 0.5rem
+      font-weight: 300
+
+  p
+    opacity: 80%
+
+  .container
+    display: flex
+
+    justify-content: space-between
+    padding: 2rem 0
+
+    .service-column
+      flex: 1
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      &.center-column
+        justify-content: center
+
+
+      .service-item
+        margin-bottom: 2rem
+        text-align: center
+        padding: 2rem
+
+        h3
+          font-size: 1.5rem
+          margin-bottom: 0.5rem
+
+        p
+          font-size: 1rem
+
+      .read-more
+        display: inline-block
+        padding: 0.5rem 2rem
+        background-color: #fff
+        color: #000
+        text-decoration: none
+        border-radius: 30px
+        transition: opacity 0.3s
+
+        &:hover
+          opacity: 50%
+
+@media (max-width: 768px)
+  #services
+    padding: 2rem
+
+    h2
+      font-size: 2rem
+
+    .container
+      flex-direction: column
+      align-items: center
+
+      .service-column
+        width: 50%
+        margin-bottom: 2rem
+
+        .service-item
+          padding: 1rem
+
+        .read-more
+          display: none
+
+
+// blog section
+#blog
+  display: flex
+  flex-direction: column
+  align-items: center
+  background-color: white
+  color: #070414
+  padding-block: 3rem
+  font-weight: 300
+
+  h2
+    font-size: 2.5rem
+    margin-bottom: 1rem
+    font-weight: 300
+
+    b
+      color: #393bb9
+      background-color: #ccc
+      border-radius: 50%
+      padding: 0.2rem 0.5rem
+      font-weight: 300
+
+  p
+    opacity: 80%
+
+  .container
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 2rem
+    max-width: 1110px
+    margin: 0 auto
+
+  .blog-card
+    padding-top: 2rem
+    background-color: white
+    border-radius: 10px
+    overflow: hidden
+    flex: 1
+    min-width: 300px
+
+    &:hover
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
+    .card-image
+      position: relative
+
+      img
+        width: 100%
+        height: auto
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+
+      .date
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-color: #393bb9
+        color: white
+        width: 50px
+        height: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        font-size: 0.9rem
+        padding: 0
+
+    .card-content
+      padding: 1rem
+
+      h3
+        font-size: 1.5rem
+        margin-bottom: 0.5rem
+
+      p
+        font-size: 1rem
+        opacity: 80%
+
+@media (max-width: 768px)
+  #blog
+    padding-block: 2rem
+
+    h2
+      font-size: 2rem
+
+    .container
+      flex-direction: column
+      align-items: center
+      width: 100%
+
+      .blog-card
+        width: 100%
+        gap: 1rem
+        .card-content
+          padding: 1rem
+
+        .date
+          width: 40px
+          height: 40px
+          font-size: 0.8rem
+
+// subscribe section
+#subscribe
+  display: flex
+  align-items: center
+  background-color: #393bb9
+  color: white
+  padding-block: 3rem
+  font-weight: 300
+
+  h2
+    font-size: 2.5rem
+    margin-bottom: 1rem
+
+
+  p
+    opacity: 80%
+    max-width: 600px
+    margin-bottom: 2rem
+    text-align: left
+
+  .subscribe-form
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 1rem
+
+    input[type="email"]
+      padding: 0.5rem 1rem
+      border: 1px solid #ccc
+      border-radius: 50px
+      font-size: 1rem
+      width: 100%
+      max-width: 300px
+
+    button
+      padding: 0.5rem 2rem
+      background-color: black
+      color: white
+      border: none
+      border-radius: 50px
+      font-size: 1rem
+      cursor: pointer
+      transition: background-color 0.3s
+
+      &:hover
+        background-color: #2e2e9b
+
+// Responsive adjustments
+@media (max-width: 768px)
+
+#subscribe
+  padding-block: 2rem
+
+  h2
+    font-size: 2rem
+
+  .subscribe-form
+    input[type="email"]
+      width: 100%
+      max-width: 100%
+
+    button
+      width: 100%
+      max-width: 100%
+
+// avis
+
+#avis
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 3rem 0
+  background-color: #f5f5f5
+
+  h2
+    font-size: 2.5rem
+    margin-bottom: 1rem
+    font-weight: 300
+
+    b
+      color: #393bb9
+      background-color: #ccc
+      border-radius: 50%
+      padding: 0.2rem 0.5rem
+      font-weight: 300
+
+  .container
+    display: flex
+    justify-content: space-between
+    width: 100%
+    max-width: 1110px
+    margin: 0 auto
+    padding-top: 2rem
+
+  .avis-card
+    flex: 1
+    margin: 0 1rem
+    padding: 2rem
+    border-radius: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+
+    &.white-card
+      background-color: white
+
+    &.blue-card
+      background-color: #393bb9
+      color: white
+      transition: .5s
+
+      &:hover
+        background-color: white
+        color: black
+
+    .photo
+      width: 100px
+      height: 100px
+      margin-bottom: 1rem
+
+    .card-content
+      h3
+        font-size: 1.5rem
+        margin-bottom: 0.5rem
+
+      h4
+        font-size: 1.2rem
+        margin-bottom: 1rem
+
+      .quote
+        width: 30px
+        height: 30px
+        margin-bottom: 1rem
+
+      p
+        font-size: 1rem
+        line-height: 1.5
+
+@media (max-width: 768px)
+  #avis
+    align-items: center
+    padding: 2rem 0
+
+    .container
+      flex-direction: column
+      align-items: center
+
+    .avis-card
+      width: 100%
+      margin-bottom: 2rem
+
+      .card-content
+        padding: 1rem
+
+        h3
+          font-size: 1.2rem
+
+        h4
+          font-size: 1rem
+
+        .quote
+          width: 25px
+          height: 25px
+
+        p
+          font-size: 0.9rem
+
+// footer
+#footer
+  background-color: black
+  color: #878585
+  padding: 2rem 0
+
+  ul
+    list-style: none
+    padding: 0
+
+  .footer-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 1110px
+    margin: 0 auto
+    padding: 0 1rem
+
+  .footer-contact
+    width: 100%
+    padding: 1rem 2rem
+    background-image: url("../images/footer-bg.png")
+    background-size: cover
+
+    .footer-contact-list
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+      .footer-contact-item
+        object-fit: cover
+        display: flex
+        align-items: center
+        gap: 0.5rem
+        color: white
+        text-decoration: none
+
+        img
+          width: 20px
+          height: 20px
+
+  .footer-sections
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    margin-top: 2rem
+
+    .footer-section
+      flex: 1
+      margin: 0 1rem
+
+      .footer-title
+        color: white
+        font-size: 1.5rem
+        margin-bottom: 1rem
+        text-align: left
+
+      .footer-text
+        text-align: left
+        font-size: 1rem
+        color: #878585
+
+      .footer-links
+        list-style: none
+        padding: 0
+
+        .footer-link
+          margin-bottom: 0.5rem
+
+          a
+            color: #878585
+            text-decoration: none
+            transition: color 0.3s
+
+            &:hover
+              color: #ccc
+
+      .footer-social
+        display: flex
+        gap: 0.5rem
+
+        img
+          width: 30px
+          height: 30px
+
+// Responsive adjustment
+@media (max-width: 768px)
+  #footer
+    .footer-container
+      .footer-sections
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        .footer-section
+          margin-bottom: 2rem
+          text-align: center
+
+          .footer-title
+            font-size: 1.2rem
+
+          .footer-text
+            font-size: 0.9rem
+
+          .footer-links
+            .footer-link
+              margin-bottom: 1rem
+
+              a
+                font-size: 0.9rem
+
+          .footer-social
+            justify-content: center
+
+            img
+              width: 25px
+              height: 25px
