@@ -1,0 +1,66 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #0e2a47; }
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw; }
+  #app input {
+    border-radius: 50px;
+    border: solid 2px #ffb215;
+    padding: 10px 20px;
+    outline: none;
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial;
+    color: #0e2a47;
+    max-width: 150px;
+    margin-bottom: 10px; }
+  #app button {
+    border-radius: 50px;
+    border: solid 2px #ffb215;
+    padding: 10px 20px;
+    outline: none;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Arial black';
+    color: #0e2a47;
+    cursor: pointer;
+    transition: .2s; }
+    #app button:hover {
+      background-color: #ffb215; }
+  #app #game {
+    max-width: 800px;
+    text-align: center; }
+    #app #game h1 {
+      font-family: 'Arial Black';
+      color: #ffb215;
+      text-transform: uppercase; }
+    #app #game #lvls {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0; }
+      #app #game #lvls li {
+        background-color: #0e2a47;
+        border-radius: 50px;
+        padding: 10px 20px;
+        margin: 10px;
+        color: #fff;
+        border: solid 2px #fff;
+        cursor: pointer;
+        transition: .2s;
+        display: flex;
+        flex-direction: column; }
+        #app #game #lvls li b {
+          transition: .2s;
+          color: #ffb215; }
+
+/*# sourceMappingURL=style.css.map */
