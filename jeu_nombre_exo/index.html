@@ -10,15 +10,21 @@
     <title>JS</title>
 </head>
 <body>
-    <div id="app">
-        <div id="game">
-            <h1>Trouvez le nombre compris entre 1 et</h1>
-            <ul id="lvls">
-                <li data-trymax="10"><b>100</b><small>10 tentatives</small></li>
-                <li data-trymax="10"><b>200</b><small>10 tentatives</small></li>
-                <li data-trymax="20"><b>1000</b><small>20 tentatives</small></li>
-            </ul>
+<div id="app">
+    <div id="game">
+        <h1>Trouvez le nombre</h1>
+        <ul id="lvls">
+            <li data-trymax="10"><b>100</b><small>10 tentatives</small></li>
+            <li data-trymax="10"><b>200</b><small>10 tentatives</small></li>
+            <li data-trymax="20"><b>1000</b><small>20 tentatives</small></li>
+        </ul>
+        <div class="choice">
+            <div id="attempts"></div>
+            <input type="number" id="guessInput" placeholder="Entrez votre supposition">
+            <button id="guessButton">Deviner</button>
+            <div id="feedback"></div>
         </div>
     </div>
+</div>
 </body>
 </html>
